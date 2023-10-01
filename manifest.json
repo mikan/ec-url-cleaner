@@ -1,0 +1,60 @@
+{
+  "name": "EC URL Cleaner",
+  "version": "0.0.1",
+  "manifest_version": 3,
+  "description": "Copy the clean URL of Amazon product pages",
+  "permissions": ["contextMenus", "clipboardWrite"],
+  "host_permissions": [
+    "https://www.amazon.com/*",
+    "https://www.amazon.com.au/*",
+    "https://www.amazon.com.br/*",
+    "https://www.amazon.ca/*",
+    "https://www.amazon.cn/*",
+    "https://www.amazon.fr/*",
+    "https://www.amazon.de/*",
+    "https://www.amazon.in/*",
+    "https://www.amazon.it/*",
+    "https://www.amazon.co.jp/*",
+    "https://www.amazon.com.mx/*",
+    "https://www.amazon.nl/*",
+    "https://www.amazon.pl/*",
+    "https://www.amazon.sg/*",
+    "https://www.amazon.es/*",
+    "https://www.amazon.com.tr/*",
+    "https://www.amazon.ae/*",
+    "https://www.amazon.co.uk/*",
+    "https://item.rakuten.co.jp/*"
+  ],
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.amazon.com/*",
+        "https://www.amazon.com.au/*",
+        "https://www.amazon.com.br/*",
+        "https://www.amazon.ca/*",
+        "https://www.amazon.cn/*",
+        "https://www.amazon.fr/*",
+        "https://www.amazon.de/*",
+        "https://www.amazon.in/*",
+        "https://www.amazon.it/*",
+        "https://www.amazon.co.jp/*",
+        "https://www.amazon.com.mx/*",
+        "https://www.amazon.nl/*",
+        "https://www.amazon.pl/*",
+        "https://www.amazon.sg/*",
+        "https://www.amazon.es/*",
+        "https://www.amazon.com.tr/*",
+        "https://www.amazon.ae/*",
+        "https://www.amazon.co.uk/*",
+        "https://item.rakuten.co.jp/*"
+      ],
+      "js": ["src/content.js"]
+    }
+  ],
+  "icons": {
+    "128": "icons/128.png"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "ec-url-cleaner",
+  "version": "0.0.1",
+  "description": "A Chrome extension that copies clean URLs of Amazon product pages",
+  "packageManager": "pnpm@8.8.0",
+  "scripts": {
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikan/ec-url-cleaner.git"
+  },
+  "author": "mikan",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.50.0",
+    "eslint-config-prettier": "^9.0.0",
+    "prettier": "^3.0.3"
+  }
+}
