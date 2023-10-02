@@ -2,6 +2,8 @@
 
 A Chrome extension that copies clean URLs of Amazon product pages.
 
+![](screenshot.png)
+
 ## How it works
 
 If you're showing Amazon's product page like...
@@ -45,6 +47,12 @@ Run eslint:
 
 ```
 pnpm eslint
+```
+
+Packaging to package.zip:
+
+```
+pnpm package
 ```
 
 ## License
