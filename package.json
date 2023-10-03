@@ -8,7 +8,7 @@
     "format:check": "prettier --check .",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
-    "package": "rm -f package.zip && zip -r package.zip manifest.json src/ icons/"
+    "package": "rm -f package.zip && zip -r package.zip manifest.json src/*.js icons/128.png"
   },
   "repository": {
     "type": "git",
