@@ -1,0 +1,20 @@
+name: Lint
+on: [push]
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "20"
+      - name: Corepack enable
+        run: corepack enable pnpm
+      - name: Install packages
+        run: pnpm i
+      - name: Prettier
+        run: pnpm format:check
+      - name: ESLint
+        run: pnpm lint
+      - name: Run packaging
+        run: pnpm package
