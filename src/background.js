@@ -1,10 +1,10 @@
-chrome.runtime.onInstalled.addListener(function () {
-  chrome.management.getSelf(function (extension) {
+chrome.runtime.onInstalled.addListener(() => {
+  chrome.management.getSelf((extension) => {
     let title = "Copy clean URL";
     if (extension.installType === "development") {
       title += " [dev]";
     }
-    chrome.contextMenus.removeAll(function () {
+    chrome.contextMenus.removeAll(() => {
       chrome.contextMenus.create({
         title: title,
         contexts: ["page"],
@@ -15,6 +15,6 @@ chrome.runtime.onInstalled.addListener(function () {
   });
 });
 
-chrome.contextMenus.onClicked.addListener(function (_, tab) {
+chrome.contextMenus.onClicked.addListener((_, tab) => {
   chrome.tabs.sendMessage(tab.id, "");
 });
