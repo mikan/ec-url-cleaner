@@ -1,3 +1,4 @@
+/* node:coverage disable */
 if (this.chrome) {
   chrome.runtime.onMessage.addListener(() => {
     const result = clean(window.location.href);
@@ -7,6 +8,7 @@ if (this.chrome) {
     });
   });
 }
+/* node:coverage enable */
 
 /**
  * Remove noisy params from given URL.
