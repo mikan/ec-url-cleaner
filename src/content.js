@@ -35,6 +35,14 @@ function clean(url) {
   // category
   if (tokens.indexOf("b") > 0) {
     return parser.origin + "/b/?node=" + parser.searchParams.get("node");
+  } else if (tokens.indexOf("s") > 0) {
+    return (
+      parser.origin +
+      "/s/?bbn=" +
+      parser.searchParams.get("bbn") +
+      "&rh=" +
+      parser.searchParams.get("rh")
+    );
   } else if (path.startsWith("/gp/browse.html")) {
     return parser.origin + "/gp/browse.html?node=" + parser.searchParams.get("node");
   }

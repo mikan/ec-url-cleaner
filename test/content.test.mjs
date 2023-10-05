@@ -29,6 +29,21 @@ test("amazon.com URLs", () => {
       "https://www.amazon.com/gift-cards/b/?ie=UTF8&node=2238192011&ref_=nav_cs_gc",
       "https://www.amazon.com/b/?node=2238192011",
     ],
+    [
+      // category with s
+      "https://www.amazon.com/s?i=specialty-aps&bbn=16225009011&rh=n%3A%2116225009011%2Cn%3A172541&ref=nav_em__nav_desktop_sa_intl_headphones_0_2_5_8",
+      "https://www.amazon.com/s/?bbn=16225009011&rh=n:!16225009011,n:172541",
+    ],
+    [
+      // category with /go/browse.html
+      "https://www.amazon.com/gp/browse.html?rw_useCurrentProtocol=1&node=5522569011&ref_=chp_manbrowse_BOTYSF",
+      "https://www.amazon.com/gp/browse.html?node=5522569011",
+    ],
+    [
+      // ref only
+      "https://www.amazon.com/gp/goldbox?ref_=nav_cs_gb",
+      "https://www.amazon.com/gp/goldbox",
+    ],
   ].forEach((sample) => {
     assert.strictEqual(content.clean(sample[0]), sample[1]);
   });
