@@ -1,10 +1,12 @@
-chrome.runtime.onMessage.addListener(() => {
-  const result = clean(window.location.href);
-  document.getElementsByTagName("body")[0].focus();
-  navigator.clipboard.writeText(result).then(() => {
-    console.log("ec-url-cleaner: " + result);
+if (this.chrome) {
+  chrome.runtime.onMessage.addListener(() => {
+    const result = clean(window.location.href);
+    document.getElementsByTagName("body")[0].focus();
+    navigator.clipboard.writeText(result).then(() => {
+      console.log("ec-url-cleaner: " + result);
+    });
   });
-});
+}
 
 /**
  * Remove noisy params from given URL.
@@ -44,4 +46,10 @@ function clean(url) {
     path = "/dp/" + tokens[4] + "/";
   }
   return parser.origin + path;
+}
+
+try {
+  module.exports = { clean };
+} catch (e) {
+  // module used by unit testing
 }
