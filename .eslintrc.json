@@ -6,7 +6,8 @@
     "browser": true
   },
   "globals": {
-    "chrome": "readonly"
+    "chrome": "readonly",
+    "module": "readonly"
   },
   "extends": ["eslint:recommended", "prettier"]
 }
