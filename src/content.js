@@ -1,7 +1,7 @@
 chrome.runtime.onMessage.addListener(() => {
   const result = clean(window.location.href);
   document.getElementsByTagName("body")[0].focus();
-  navigator.clipboard.writeText(result).then(function () {
+  navigator.clipboard.writeText(result).then(() => {
     console.log("ec-url-cleaner: " + result);
   });
 });
