@@ -1,6 +1,6 @@
 {
   "name": "ec-url-cleaner",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A Chrome extension that copies clean URLs of Amazon product pages",
   "packageManager": "pnpm@8.8.0",
   "scripts": {

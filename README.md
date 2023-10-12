@@ -24,6 +24,18 @@ See [manifest.json](manifest.json) for the complete list.
 
 ## Installation
 
+### Chrome Web Store
+
+This extension is available at Chrome Web Store:
+
+> EC URL Cleaner
+> 
+> https://chromewebstore.google.com/detail/ec-url-cleaner/chjmklhdeoajccpinnhbibfbgjplnahi
+
+Please give us a ⭐️⭐️⭐️⭐️⭐️ review if you like it.
+
+### Local
+
 See "Loading an unpacked extension" section of the Google's documentation:
 
 > Chrome Extension development basics - Chrome for Developers
