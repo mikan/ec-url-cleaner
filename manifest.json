@@ -1,6 +1,6 @@
 {
   "name": "EC URL Cleaner",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "manifest_version": 3,
   "description": "Copy the clean URL of Amazon product pages",
   "permissions": ["contextMenus", "clipboardWrite"],
