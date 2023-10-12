@@ -29,7 +29,7 @@ See [manifest.json](manifest.json) for the complete list.
 This extension is available at Chrome Web Store:
 
 > EC URL Cleaner
-> 
+>
 > https://chromewebstore.google.com/detail/ec-url-cleaner/chjmklhdeoajccpinnhbibfbgjplnahi
 
 Please give us a ⭐️⭐️⭐️⭐️⭐️ review if you like it.
