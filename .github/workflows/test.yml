@@ -4,12 +4,12 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: "20"
-      - name: Corepack enable
-        run: corepack enable pnpm
+      - name: Install pnpm
+        run: npm i -g pnpm@10.2.0
       - name: Install packages
         run: pnpm i
       - name: Prettier
